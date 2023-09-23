@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
             children: [
               Image.asset('assets/benchpress.jpg'),
               Container(
+                  margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
                   width: 300,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
