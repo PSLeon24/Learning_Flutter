@@ -1,66 +1,155 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(MyApp());
 
-// stless
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('금호동3가'),
-          centerTitle: false,
-          actions: [
-            Icon(Icons.search),
-            Icon(Icons.menu),
-            Icon(Icons.church),
+      debugShowCheckedModeBanner: false,
+      title: 'BBANTO',
+      home: Grade(),
+    );
+  }
+}
+
+class Grade extends StatelessWidget {
+  const Grade({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.amber[800],
+      appBar: AppBar(
+        title: Text('BBANTO'),
+        backgroundColor: Colors.amber[700],
+        elevation: 0.0,
+      ),
+
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(30.0, 40.0, 0, 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('./assets/bbanto.gif'),
+                radius: 60.0,
+              ),
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Divider(
+              height: 60.0, // margin top & bottom
+              color: Colors.grey[850],
+              thickness: 0.5,
+              endIndent: 30.0,
+            ),
+            Text('Name',
+            style: TextStyle(
+              color: Colors.white,
+              letterSpacing: 2.0
+            ),),
+            SizedBox(
+              height: 10.0,
+            ),
+            Text('BBANTO',
+            style: TextStyle(
+              color: Colors.white,
+              letterSpacing: 2.0,
+              fontSize: 28.0,
+              fontWeight: FontWeight.bold
+            ),),
+            SizedBox(
+              height: 30.0,
+            ),
+            Text('BBANTO POWER LEVEL',
+              style: TextStyle(
+                  color: Colors.white,
+                  letterSpacing: 2.0
+              ),),
+            SizedBox(
+              height: 10.0,
+            ),
+            Text('14',
+              style: TextStyle(
+                  color: Colors.white,
+                  letterSpacing: 2.0,
+                  fontSize: 28.0,
+                  fontWeight: FontWeight.bold
+              ),),
+            SizedBox(
+              height: 10.0,
+            ),
+            Row(
+              children: [
+                Icon(Icons.check_circle_outline),
+                SizedBox(width: 10.0),
+                Text('Using lightsaber',
+                style: TextStyle(
+                  fontSize: 16.0,
+                  letterSpacing: 1.0
+                ),)
+
+              ],
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Row(
+              children: [
+                Icon(Icons.check_circle_outline),
+                SizedBox(width: 10.0),
+                Text('face hero tattoo',
+                  style: TextStyle(
+                      fontSize: 16.0,
+                      letterSpacing: 1.0
+                  ),)
+
+              ],
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Row(
+              children: [
+                Icon(Icons.check_circle_outline),
+                SizedBox(width: 10.0),
+                Text('Fire flames',
+                  style: TextStyle(
+                      fontSize: 16.0,
+                      letterSpacing: 1.0
+                  ),)
+
+              ],
+            ),
+            SizedBox(height: 10,),
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/bbanto.jpeg'),
+                radius: 40,
+                backgroundColor: Colors.amber[800],
+
+              )
+            )
           ],
         ),
-        body: Container(
-          margin: EdgeInsets.fromLTRB(50, 10, 50, 10),
-          padding: EdgeInsets.all(10),
-          height: 150,
-          child: Row(
-            children: [
-              Image.asset('assets/benchpress.jpg'),
-              Container(
-                  margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                  width: 300,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                          child: Text(
-                            '캐논 DSLR 100D (단렌즈, 충전기 16기가SD 포함)',
-                            style: TextStyle(fontSize: 20),
-                          )),
-                      Container(
-                        child: Text('성동구 행당동 · 끝올 10분 전')
-                      ),
-                     Container(
-                        child: Text('210,000원')
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Icon(Icons.favorite),
-                          Text('4')
-                        ]
-                      )
-                    ],
-                  ),
-              )
-            ],
-          ),
-        ),
-        bottomNavigationBar: BottomAppBar(),
       ),
+    bottomNavigationBar: BottomAppBar(
+      height: 50.0,
+      child:
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Icon(Icons.call),
+          Icon(Icons.menu),
+          Icon(Icons.message),
+        ],
+      ),
+    ),
     );
   }
 }
