@@ -21,3 +21,24 @@
   |screen|code|result|
   |--|--|--|
   |<img width="400" src="https://github.com/PSLeon24/Learning_Flutter/assets/59058869/fc2ef1c8-9559-470f-9fd1-fa0a92ef5c84">|<img width="400" src="https://github.com/PSLeon24/Learning_Flutter/assets/59058869/45668bb2-66a0-4679-97f3-6252cc8188b6">|<img width="400" src="https://github.com/PSLeon24/Learning_Flutter/assets/59058869/416eca94-aa5e-414d-a945-334156a1923e">|
+
+<hr>
+
+<b>2023/10/01</b>: <a href="https://github.com/PSLeon24/Learning_Flutter/blob/main/drawer/lib/main.dart">Drawer 메뉴 만들기</a>
+  - Drawer()
+    - ListView(children:)
+        - UserAccountDrawerHeader()
+            - currentAccountPicture
+            - accountName
+            - accountEmail
+            - onDetailsPressed
+            - decoration
+            - otherAccountPictures
+        - ListTile()
+            - Icon
+            - Text
+            - onTap
+    
+  |screen|code|result|
+  |--|--|--|
+  |<img width="400" src="https://github.com/PSLeon24/Learning_Flutter/assets/59058869/4c6d4c76-293e-460f-9694-0eec93871193">|<img width="400" src="https://github.com/PSLeon24/Learning_Flutter/assets/59058869/1b20aac0-8d19-4ef0-955e-c2ae2ce8aaaa">|<img width="400" src="https://github.com/PSLeon24/Learning_Flutter/assets/59058869/a2754a09-d2fb-413c-9337-4a0418e353c8">|
